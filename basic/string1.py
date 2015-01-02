@@ -54,11 +54,9 @@ def both_ends(s):
 def fix_start(s):
   stra = s[0]
   strb = "*"
-  for letter in s:
-    s.find(stra)
-    s.replace(stra, strb)
-
-  return s
+  strend = s[1:]
+  conc = strend.replace(stra, strb)
+  return stra + conc
 
 
 # D. MixUp
